@@ -27,4 +27,5 @@ app.listen('3000', (req, res) => {
 })
 //docker tag local-image:tagname new-repo:tagname
 //docker push new-repo:tagname
-//V8b)8H9ES,Gv/nr
+//V8b)8H9ES,Gv/nr\
+//
