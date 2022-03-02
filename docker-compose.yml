@@ -3,22 +3,23 @@ version: "3.5"
 services:
   app:
     image: node:12.18.1
+    working_dir: /app
     volumes:
-      - ./:/app
+       - ./:/app
     environment:
-       DB_HOST=host
-       DB_NAME=name
+       - DB_HOST=host
+       - DB_NAME=name
     ports:
-       -3000:3000
+       - 3000:3000
   
   
   db:
     image: mongo:5.7
     volumes:
-      - todo-mongo-data:/var/lib/mongo
+       - todo-mongo-data:/var/lib/mongo
     environment:
-       DB_HOST=host
-       DB_NAME=name
+       - DB_HOST=host
+       - DB_NAME=name
   
 volumes:
-      - todo-mongo-data
+       - todo-mongo-data
